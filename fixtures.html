@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Fixtures</title>
+        <link rel="stylesheet" href="unitedStyle.css"/>
+		<script src="unitedScript.js"></script>
+		<link rel="shortcut icon" href="Images/logo.png"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+
+		<!--Header-->
+		<header>
+			<a href="index.html"><img src="Images/logo.png" alt="logo" id="logo"></a>
+
+			<div class="container container-controls">
+				<a class="controls" id="menu-icon" onclick="openMenu()"><i class="fa fa-bars"></i> <span>menu</span></a>
+			</div>
+
+			<!--Menu-->
+			<nav id="menu">
+				<div class="container container-controls">
+					<a class="controls" id="close-button" onclick="closeContent()"><i class="fa fa-times"></i></a>
+				</div>
+
+				<a href="index.html">Home</a>
+				<a href="history.html">History</a>
+				<a href="squad.html">Squad</a>
+				<a href="fixtures.html">Fixtures</a>
+				<a href="chatBoard.html">Chatboard</a>
+			</nav>
+		</header>
+
+		<!--Main Page Content-->
+		<main>
+			<div class="container">
+				<section class="container-content" id="fixtures-container">
+					
+					<!--Fixtures Search Bar-->
+					<div class="container container-controls">
+                        <input type="text" class="controls" id="fixtures-search-bar" onkeyup="searchFixtures()" placeholder="Team Name...">
+                    </div>
+
+					<!--Fixtures Table-->
+                    <table id="fixtures-table">
+						<thead>
+								<th>opponent</th>
+								<th>competition</th>
+								<th>stadium</th>
+								<th>date</th>
+						</thead>
+						<tr>
+							<td>arsenal</td>					
+							<td>barclays premier league</td>					
+							<td>emirates stadium</td>
+							<td>02/12/2017</td>
+						</tr>
+						<tr>
+							<td>CSKA moscow</td>
+							<td>UEFA champions league</td>
+							<td>old trafford</td>
+							<td>05/12/2017</td>
+						</tr>
+						<tr>
+							<td>manchester city</td>
+							<td>barclays premier league</td>
+							<td>old trafford</td>
+							<td>10/12/2017</td>
+						</tr>
+						<tr>
+							<td>bournemouth</td>
+							<td>barclays premier league</td>
+							<td>old trafford</td>
+							<td>13/12/2017</td>
+						</tr>
+						<tr>
+							<td>west brom albion</td>
+							<td>barclays premier league</td>
+							<td>the hawthorns</td>
+							<td>17/12/2017</td>
+						</tr>
+						<tr>
+							<td>bristol city</td>
+							<td>league cup</td>
+							<td>ashton gate stadium</td>
+							<td>20/12/2017</td>
+						</tr>
+						<tr>
+							<td>leicester city</td>
+							<td>barclays premier league</td>
+							<td>king power stadium</td>
+							<td>23/12/2017</td>
+						</tr>
+						<tr>
+							<td>southampton</td>
+							<td>barclays premier league</td>
+							<td>old trafford</td>
+							<td>30/12/2017</td>
+						</tr>
+						<tr>
+							<td>everton</td>
+							<td>barclays premier league</td>
+							<td>goodison park</td>
+							<td>01/01/2018</td>
+						</tr>
+						<tr>
+							<td>stoke city</td>
+							<td>barclays premier league</td>
+							<td>old trafford</td>
+							<td>15/01/2018</td>
+						</tr>
+						<tr>
+							<td>burnley FC</td>
+							<td>barclays premier league</td>
+							<td>turf moor</td>
+							<td>20/01/2018</td>
+						</tr>
+						<tr>
+							<td>tottenham hotspur</td>
+							<td>barclays premier league</td>
+							<td>wembley stadium</td>
+							<td>31/01/2018</td>
+						</tr>
+						<tr>
+							<td>huddersfield</td>
+							<td>barclays premier league</td>
+							<td>old trafford</td>
+							<td>03/02/2018</td>
+						</tr>
+						<tr>
+							<td>newcastle united</td>
+							<td>barclays premier league</td>
+							<td>st james' park</td>
+							<td>10/02/2018</td>
+						</tr>
+						<tr>
+							<td>chelsea</td>
+							<td>barclays premier league</td>
+							<td>old trafford</td>
+							<td>24/02/2018</td>
+						</tr>
+						<tr>
+							<td>crystal palace</td>
+							<td>barclays premier league</td>
+							<td>selhurst park</td>
+							<td>03/03/2018</td>
+						</tr>
+						<tr>
+							<td>liverpool</td>
+							<td>barclays premier league</td>
+							<td>old trafford</td>
+							<td>10/03/2018</td>
+						</tr>
+						<tr>
+							<td>west ham</td>
+							<td>barclays premier league</td>
+							<td>london stadium</td>
+							<td>17/03/2018</td>
+						</tr>
+					</table>
+
+				</section>
+			</div>
+		</main>
+
+		<!--Footer-->
+		<footer>
+			<div class="container-content">
+                <a id="disclaimer-icon" onclick="viewDisclaimer()"><i class="fa fa-exclamation-circle"></i> <span>disclaimer</span></a>
+            </div>
+			
+			<div class="container-content">
+				<a href="https://www.facebook.com/manchesterunited/" target="blank"><i class="fa fa-facebook-square"></i></a>
+			    <a href="https://www.instagram.com/manchesterunited/?hl=en" target="blank"><i class="fa fa-instagram"></i></a>
+			    <a href="https://twitter.com/ManUtd?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="blank"><i class="fa fa-twitter"></i></a>
+		        <a href="https://www.youtube.com/channel/UC6yW44UGJJBvYTlfC7CRg2Q" target="blank"><i class="fa fa-youtube-play"></i></a>
+			</div>
+
+			<div class="container-content">
+                <span>Manchester United &copy; 2023</span>
+            </div>
+		</footer>
+
+	</body>
+</html>

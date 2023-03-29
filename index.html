@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Manchester United</title>
+        <link rel="stylesheet" href="unitedStyle.css"/>
+		<script src="unitedScript.js"></script>
+		<link rel="shortcut icon" href="Images/logo.png"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+
+		<!--Header-->
+		<header>
+			<a href="index.html"><img src="Images/logo.png" alt="logo" id="logo"></a>
+
+			<div class="container container-controls">
+				<label class="controls" id="menu-icon" onclick="openMenu()"><i class="fa fa-bars"></i></label>
+			</div>
+
+			<!--Menu-->
+			<nav id="menu">
+				<div class="container container-controls">
+					<a href="javascript:void(0)" class="controls" id="close-button" onclick="closeMenu()"><i class="fa fa-times"></i></a>
+				</div>
+
+				<a href="index.html">Home</a>
+				<a href="history.html">History</a>
+				<a href="squad.html">Squad</a>
+				<a href="fixtures.html">Fixtures</a>
+				<a href="chatBoard.html">Chatboard</a>
+			</nav>
+		</header>
+
+		<!--Main Content Container-->
+		<main>
+			<div class="container">
+            	<div class="container-content" id="home-container">
+
+                    <!--Page Links Container-->
+                    <div class="container-content" id="page-links-container">
+                        <a href="history.html" class="card card-page-link">
+                            <img src="Images/Home/Page-Cards/history.jpg" alt="history-card-img" class="card-image">
+                            <div class="card-body">
+                                <h1 class="card-title">history</h1>
+                            </div>
+                        </a>
+
+                        <a href="squad.html" class="card card-page-link background-black">
+                            <img src="Images/Home/Page-Cards/squad.jpeg" alt="squad-card-img" class="card-image">
+                            <div class="card-body">
+                                <h1 class="card-title">squad</h1>
+                            </div>
+                        </a>
+
+                        <a href="fixtures.html" class="card card-page-link">
+                           <img src="Images/Home/Page-Cards/fixtures.jpeg" alt="fixtures-card-img" class="card-image">
+                            <div class="card-body">
+                                <h1 class="card-title">fixtures</h1>
+                            </div>
+                        </a>
+
+                        <a href="chatBoard.html" class="card card-page-link background-black">
+                           <img src="Images/Home/Page-Cards/chatboard.jpeg" alt="chatBoard-card-img" class="card-image">
+                            <div class="card-body">
+                                <h1 class="card-title">chatboard</h1>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--News Container-->
+                    <div class="container-content" id="news-container">
+                        <a href="#" class="card card-news-link">
+                            <img src="Images/Home/News-Cards/pogba-ban.jpeg" alt="pogba-ban-img" class="card-image">
+                            <div class="card-body">
+                                <h1 class="card-title">pogba remains positive ahead of match ban</h1>
+                            </div>
+                        </a>
+
+                        <a href="#" class="card card-news-link">
+                            <img src="Images/Home/News-Cards/fa-cup-3rd-round.jpeg" alt="fa-cup-3rd-round-img" class="card-image">
+                            <div class="card-body">
+                                <h1 class="card-title">derby in FA cup 3RD round</h1>
+                            </div>
+                        </a>
+
+                        <a href="#" class="card card-news-link">
+                            <img src="Images/Home/News-Cards/history-making-moment.jpeg" alt="history-making-moment-img" class="card-image">
+                            <div class="card-body">
+                                <h1 class="card-title">united in history making moment</h1>
+                            </div>
+                        </a>
+
+                        <a href="#" class="card card-news-link">
+                            <img src="Images/Home/News-Cards/aliou-traore-signing.jpeg" alt="aliou-traore-signing-img" class="card-image">
+                            <div class="card-body">
+                                <h1 class="card-title">united welcome aliou traore</h1>
+                            </div>
+                        </a>
+
+                        <a href="#" class="card card-news-link">
+                            <img src="Images/Home/News-Cards/club-duo-considered.jpeg" alt="club-duo-considered-img" class="card-image">
+                            <div class="card-body">
+                                <h1 class="card-title">potential duo ahead of manchester derby</h1>
+                            </div>
+                        </a>
+
+                        <a href="#" class="card card-news-link">
+                            <img src="Images/Home/News-Cards/club-u23-players.jpeg" alt="club-u23-players-img" class="card-image">
+                            <div class="card-body">
+                                <h1 class="card-title">under 23 united 2 - 0 celtic</h1>
+                            </div>
+                        </a>
+                    </div>
+
+				</div>
+        	</div>
+		</main>
+
+		<!--Footer-->
+		<footer>
+			<div class="container">
+			    <a href="https://www.facebook.com/manchesterunited/" target="blank"><i class="fa fa-facebook-square"></i> <span>facebook</span></a>
+			    <a href="https://www.instagram.com/manchesterunited/?hl=en" target="blank"><i class="fa fa-instagram"></i> <span>instagram</span></a>
+			    <a href="https://twitter.com/ManUtd?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="blank"><i class="fa fa-twitter"></i> <span>twitter</span></a>
+		        <a href="https://www.youtube.com/channel/UC6yW44UGJJBvYTlfC7CRg2Q" target="blank"><i class="fa fa-youtube-play"></i> <span>youtube</span></a>
+			</div>
+
+            <div class="container">
+                <span id="disclaimer" onclick="viewDisclaimer()">disclaimer</span>
+            </div>
+		</footer>
+	</body>
+</html>

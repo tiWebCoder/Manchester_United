@@ -1,0 +1,214 @@
+/*
+    CONTINUE HERE:
+        - Homepage
+
+    COMPLETED:
+        - Template
+        - Fixtures
+ */
+
+html{
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+    min-height: 100%;
+    margin: auto;
+    box-sizing: inherit;
+}
+
+a, i, span, h1, th{
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: normal;
+    transition: 0.5s;
+    color: white;
+}
+
+/*****Container Styling*****/
+
+    /*****Controls Container Styling*****/
+    .container-controls{
+        display: flex;
+        padding: 5px;
+    }
+
+        .controls{
+            color: white;
+            cursor: pointer;
+            padding: 5px 5px 5px 5px;
+            margin: 5px 5px 5px 5px;
+        }
+
+/*****Table Styling*****/
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-transform: capitalize;
+    font-size: 12px;
+} 
+
+    thead{
+        text-align: center;
+        background-color: #990000;
+    }
+
+    td{
+        border-bottom: 1px solid #111;
+    }
+
+/*****Header Styling*****/
+header{
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+    background-color: #990000;
+}
+
+    /*****Logo Styling*****/
+    #logo{
+        max-width: 70px;
+        max-height: 70px;
+        width: auto;
+        height: auto;
+    }
+
+    /*****Menu Styling*****/
+    #menu{
+        transition: 0.5s;
+    }
+
+        #menu .container-controls{
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            right: 0%;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+/*****Main Content Container Styling*****/
+main{
+    width: 100%;
+    margin: 0px auto;
+}
+
+    /*****Fixtures Page Styling*****/
+
+        /*****Fixtures Searchbar Styling*****/
+        #fixtures-container #fixtures-search-bar{
+            color: #111;
+            padding: 10px 5px 10px 5px;
+        }
+
+        /*****Fixtures Table Styling*****/
+        #fixtures-container #fixtures-table{
+            text-align: center;
+            margin: 10px 0px 0px 0px;
+        }
+
+/*****Footer Styling*****/
+footer{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: -1;
+    padding: 50px 10px 50px 10px;
+    background-color: #990000;
+}
+
+    footer .container-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+        footer .container-content i{
+            border-radius: 50%;
+            margin: 5px 5px 5px 5px;
+            padding: 10px 10px 10px 10px;
+            background-color: #111;
+        }
+
+/**************************************************************Mobile Layout***************/
+@media only screen and (min-width: 320px){
+
+    body{
+        padding: 100px 0px 240px 0px;
+    }
+
+    /*****Header Styling*****/
+
+        /*****Menu Styling*****/
+        #menu{
+            position: fixed;
+            top: -100%;
+            left: 0%;
+            right: 0%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            background-color: #111;
+        }
+
+    /*****Footer Styling*****/
+    footer{
+        grid-template-columns: repeat(1, auto);
+    }
+
+}
+
+/**************************************************************Tablet Layout***************/
+@media only screen and (min-width: 768px){
+
+    body{
+        padding: 100px 0px 170px 0px;
+    }
+
+    /*****Header Styling*****/
+    header .container-controls, #menu .container-controls{
+        display: none;
+    }
+
+        /*****Menu Styling*****/
+        #menu{
+            position: initial;
+            height: initial;
+            display: initial;
+            background-color: transparent;
+        }
+
+        #menu a{
+            margin: 0px 3px 0px 3px;
+        }
+
+    /*****Footer Styling*****/
+    footer{
+        grid-template-columns: repeat(3, auto);
+    }
+
+}
+
+/**************************************************************Laptop, Desktop & Large Screen Layout***************/
+@media only screen and (min-width: 1024px){}
