@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<title>Template</title>
-        <link rel="stylesheet" href="unitedStyle.css"/>
+		<link rel="stylesheet" href="unitedStyle.css">
 		<script src="unitedScript.js"></script>
-		<link rel="shortcut icon" href="Images/logo.png"/>
+		<link rel="shortcut icon" href="Images/logo.png">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
@@ -14,51 +14,49 @@
 
 		<!--Header-->
 		<header>
-			<a href="index.html"><img src="Images/logo.png" alt="logo" id="logo"></a>
+			<div class="container">
+				<a href="index.html"><img src="Images/logo.png" alt="logo" id="logo"></a>
 
-			<div class="container container-controls">
-				<a class="controls" id="menu-icon" onclick="openMenu()"><i class="fa fa-bars"></i> <span>menu</span></a>
-			</div>
-
-			<!--Menu-->
-			<nav id="menu">
-				<div class="container container-controls">
-					<a class="controls" id="close-button" onclick="closeContent()"><i class="fa fa-times"></i></a>
+				<div class="container" id="menu-container">
+					<div class="container-controls">
+						<a class="controls fa fa-bars" id="menu-icon" onclick="openMenu()"></a>
+						<a class="controls fa fa-times" id="close-icon" onclick="closeMenu()"></a> 
+					</div>
+	
+					<!--Menu-->
+					<nav id="menu">
+						<a href="index.html">home</a>
+						<a href="fixtures.html">fixtures</a>
+						<a href="squad.html">squad</a>
+						<a href="history.html">history</a>
+						<a href="chatBoard.html">chatboard</a>
+					</nav>
 				</div>
-
-				<a href="index.html">Home</a>
-				<a href="history.html">History</a>
-				<a href="squad.html">Squad</a>
-				<a href="fixtures.html">Fixtures</a>
-				<a href="chatBoard.html">Chatboard</a>
-			</nav>
+			</div>
 		</header>
 
 		<!--Main Page Content-->
 		<main>
-			<div class="container">
-				<section class="container-content">
+			<div class="container" id="main-content-container">
+				<div class="container-content">
 					Main Page Content
-				</section>
+				</div>
 			</div>
 		</main>
 
 		<!--Footer-->
 		<footer>
-			<div class="container-content">
-                <a id="disclaimer-icon" onclick="viewDisclaimer()"><i class="fa fa-exclamation-circle"></i> <span>disclaimer</span></a>
-            </div>
-			
-			<div class="container-content">
-				<a href="https://www.facebook.com/manchesterunited/" target="blank"><i class="fa fa-facebook-square"></i></a>
-			    <a href="https://www.instagram.com/manchesterunited/?hl=en" target="blank"><i class="fa fa-instagram"></i></a>
-			    <a href="https://twitter.com/ManUtd?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="blank"><i class="fa fa-twitter"></i></a>
-		        <a href="https://www.youtube.com/channel/UC6yW44UGJJBvYTlfC7CRg2Q" target="blank"><i class="fa fa-youtube-play"></i></a>
-			</div>
+			<div class="container">
+				<span id="disclaimer-link" onclick="viewDisclaimer()">Disclaimer</span>
+				<span>Manchester United &copy; 2023</span>
 
-			<div class="container-content">
-                <span>Manchester United &copy; 2023</span>
-            </div>
+				<div class="container" id="social-media">
+					<a class="fa fa-facebook-square" href="https://www.facebook.com/manchesterunited/" target="blank"></a>
+					<a class="fa fa-instagram" href="https://www.instagram.com/manchesterunited/?hl=en" target="blank"></a>
+					<a class="fa fa-twitter" href="https://twitter.com/ManUtd?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="blank"></a>
+					<a class="fa fa-youtube-play" href="https://www.youtube.com/channel/UC6yW44UGJJBvYTlfC7CRg2Q" target="blank"></a>
+				</div>
+			</div>
 		</footer>
 
 	</body>
