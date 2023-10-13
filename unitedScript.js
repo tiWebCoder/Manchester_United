@@ -1,18 +1,34 @@
+/**
+ * Opens the menu when the menu icon is clicked
+ * @var menu - menu with links to other pages
+ * @var menuIcon - icon which displays the menu when clicked
+ * @var closeIcon - cross icon which closes the menu when clicked
+ */
+function openMenu(){
+	var menu = document.getElementById('menu'),
+		menuIcon = document.getElementById('menu-icon'),
+		closeIcon = document.getElementById('close-icon');
 
+		menu.style.transform = 'scaleY(1)';
+		menuIcon.style.display = 'none';
+		closeIcon.style.display = 'block';
+}
 
-	/**
-	 * Opens the menu
-	 */
-	function openMenu(){
-		document.getElementById('menu').style.top = "0%";
-	}
+/**
+ * Closes the menu when the close icon is clicked
+ * @var menu - menu with links which will become hidden when closed
+ * @var menuIcon - icon which displays the menu will become visible
+ * @var closeIcon - cross icon which becomes hidden and closes the menu
+ */
+function closeMenu(){
+	var menu = document.getElementById('menu'),
+	menuIcon = document.getElementById('menu-icon'),
+	closeIcon = document.getElementById('close-icon');
 
-	/**
-	 * Closes a content window when the white close icon is clicked
-	 */
-	function closeContent(){
-		document.getElementById('close-button').parentElement.parentElement.style.top = "-100%";
-	}
+	menu.style.transform = 'scaleY(0)';
+	menuIcon.style.display = 'block';
+	closeIcon.style.display = 'none';
+}
 
 	/*******************************************************************TO SORT */
     /**
