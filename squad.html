@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<title>Squad</title>
-        <link rel="stylesheet" href="unitedStyle.css"/>
+		<link rel="stylesheet" href="unitedStyle.css">
 		<script src="unitedScript.js"></script>
-		<link rel="shortcut icon" href="Images/logo.png"/>
+		<link rel="shortcut icon" href="Images/logo.png">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
@@ -14,47 +14,141 @@
 
 		<!--Header-->
 		<header>
-			<a href="index.html"><img src="Images/logo.png" alt="logo" id="logo"></a>
-
-			<div class="container container-controls">
-				<label class="controls" id="menu-icon" onclick="openMenu()"><i class="fa fa-bars"></i></label>
+			<div class="container">
+				<a href="index.html"><img src="Images/logo.png" alt="logo" id="logo"></a>
+				
+				<div class="container-controls" id="menu-controls">
+					<a class="controls fa fa-bars" id="menu-icon" onclick="openMenu()"></a>
+					<a class="controls fa fa-times" id="close-icon" onclick="closeMenu()"></a> 
+				</div>
 			</div>
 
 			<!--Menu-->
 			<nav id="menu">
-				<div class="container container-controls">
-					<a href="javascript:void(0)" class="controls" id="close-button" onclick="closeMenu()"><i class="fa fa-times"></i></a>
-				</div>
-
-				<a href="index.html">Home</a>
-				<a href="history.html">History</a>
-				<a href="squad.html">Squad</a>
-				<a href="fixtures.html">Fixtures</a>
-				<a href="chatBoard.html">Chatboard</a>
+				<a href="index.html">home</a>
+				<a href="fixtures.html">fixtures</a>
+				<a href="squad.html">squad</a>
+				<a href="history.html">history</a>
+				<a href="chatBoard.html">chatboard</a>
 			</nav>
 		</header>
 
-		<!--Main Content Container-->
+		<!--Main Page Content-->
 		<main>
-			<div class="container">
-            	<div class="container-content">
-					container
-				</div>
-        	</div>
+			<div class="container" id="squad-content-container">
+
+				<!--Banner Section-->
+				<section class="container-content" id="banner"></section>
+
+				<section class="container">
+					<div class="container-content" id="squad-container">
+						<div class="card card-squad">
+							<img src="Images/Squad/Goalkeepers/de-gea.png" alt="de-gea-card-squad" class="card-image">
+							<div class="card-body">
+								<h3 class="card-title">david de gea</h3>
+								<p class="card-text">goalkeeper</p>
+							</div>
+						</div>
+
+						<div class="card card-squad">
+							<img src="Images/Squad/Defenders/lindelof.png" alt="lindelof-card-squad" class="card-image">
+							<div class="card-body">
+								<h3 class="card-title">victor lindelof</h3>
+								<p class="card-text">defender</p>
+							</div>
+						</div>
+
+						<div class="card card-squad">
+							<img src="Images/Squad/Defenders/rojo.png" alt="rojo-card-squad" class="card-image">
+							<div class="card-body">
+								<h3 class="card-title">marcos rojo</h3>
+								<p class="card-text">defender</p>
+							</div>
+						</div>
+
+						<div class="card card-squad">
+							<img src="Images/Squad/Defenders/smalling.png" alt="smalling-card-squad" class="card-image">
+							<div class="card-body">
+								<h3 class="card-title">chris smalling</h3>
+								<p class="card-text">defender</p>
+							</div>
+						</div>
+
+						<div class="card card-squad">
+							<img src="Images/Squad/Defenders/valencia.png" alt="valencia-card-squad" class="card-image">
+							<div class="card-body">
+								<h3 class="card-title">antonio valencia</h3>
+								<p class="card-text">defender</p>
+							</div>
+						</div>
+
+						<div class="card card-squad">
+							<img src="Images/Squad/Midfielders/pogba.png" alt="pogba-card-squad" class="card-image">
+							<div class="card-body">
+								<h3 class="card-title">paul pogba</h3>
+								<p class="card-text">midfielder</p>
+							</div>
+						</div>
+
+						<div class="card card-squad">
+							<img src="Images/Squad/Midfielders/lingard.png" alt="lingard-card-squad" class="card-image">
+							<div class="card-body">
+								<h3 class="card-title">jesse lingard</h3>
+								<p class="card-text">midfielder</p>
+							</div>
+						</div>
+
+						<div class="card card-squad">
+							<img src="Images/Squad/Midfielders/young.png" alt="young-card-squad" class="card-image">
+							<div class="card-body">
+								<h3 class="card-title">ashley young</h3>
+								<p class="card-text">midfielder</p>
+							</div>
+						</div>
+
+						<div class="card card-squad">
+							<img src="Images/Squad/Midfielders/matic.png" alt="matic-card-squad" class="card-image">
+							<div class="card-body">
+								<h3 class="card-title">nemanja matic</h3>
+								<p class="card-text">midfielder</p>
+							</div>
+						</div>
+
+						<div class="card card-squad">
+							<img src="Images/Squad/Forwards/lukaku.png" alt="lukaku-card-squad" class="card-image">
+							<div class="card-body">
+								<h3 class="card-title">romelu lukaku</h3>
+								<p class="card-text">forward</p>
+							</div>
+						</div>
+
+						<div class="card card-squad">
+							<img src="Images/Squad/Forwards/martial.png" alt="martial-card-squad" class="card-image">
+							<div class="card-body">
+								<h3 class="card-title">anthony martial</h3>
+								<p class="card-text">forward</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+			</div>
 		</main>
 
 		<!--Footer-->
 		<footer>
 			<div class="container">
-			    <a href="https://www.facebook.com/manchesterunited/" target="blank"><i class="fa fa-facebook-square"></i> <span>facebook</span></a>
-			    <a href="https://www.instagram.com/manchesterunited/?hl=en" target="blank"><i class="fa fa-instagram"></i> <span>instagram</span></a>
-			    <a href="https://twitter.com/ManUtd?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="blank"><i class="fa fa-twitter"></i> <span>twitter</span></a>
-		        <a href="https://www.youtube.com/channel/UC6yW44UGJJBvYTlfC7CRg2Q" target="blank"><i class="fa fa-youtube-play"></i> <span>youtube</span></a>
-			</div>
+				<span id="disclaimer-link" onclick="viewDisclaimer()">Disclaimer</span>
+				<span>Manchester United &copy; 2023</span>
 
-            <div class="container">
-                <span id="disclaimer" onclick="viewDisclaimer()">disclaimer</span>
-            </div>
+				<div class="container-controls" id="social-media">
+					<a class="controls fa fa-facebook-square" href="https://www.facebook.com/manchesterunited/" target="blank"></a>
+					<a class="controls fa fa-instagram" href="https://www.instagram.com/manchesterunited/?hl=en" target="blank"></a>
+					<a class="controls fa fa-twitter" href="https://twitter.com/ManUtd?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="blank"></a>
+					<a class="controls fa fa-youtube-play" href="https://www.youtube.com/channel/UC6yW44UGJJBvYTlfC7CRg2Q" target="blank"></a>
+				</div>
+			</div>
 		</footer>
+
 	</body>
 </html>
