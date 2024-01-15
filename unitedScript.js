@@ -1,4 +1,11 @@
 /**
+ * Displays the disclaimer when clicking the button inside the footer
+ */
+function viewDisclaimer(){
+	alert("This site has been constructed as coursework for module U08054 Web Technology, at Oxford Brookes University. It is not a working website and is not connected with any site or individual referenced. The views and opinions expressed within these pages are personal and should not be construed as reflecting the views and opinions of Oxford Brookes University.");
+}
+
+/**
  * Opens the menu when the menu icon is clicked
  * @var menu - menu with links to other pages
  * @var menuIcon - icon which displays the menu when clicked
@@ -9,6 +16,8 @@ function openMenu(){
 		menuIcon = document.getElementById('menu-icon'),
 		closeIcon = document.getElementById('close-icon');
 
+		menu.style.height = '100%';
+		menu.style.overflow = 'visible';
 		menu.style.transform = 'scaleY(1)';
 		menuIcon.style.display = 'none';
 		closeIcon.style.display = 'block';
@@ -22,52 +31,42 @@ function openMenu(){
  */
 function closeMenu(){
 	var menu = document.getElementById('menu'),
-	menuIcon = document.getElementById('menu-icon'),
-	closeIcon = document.getElementById('close-icon');
+		menuIcon = document.getElementById('menu-icon'),
+		closeIcon = document.getElementById('close-icon');
 
-	menu.style.transform = 'scaleY(0)';
-	menuIcon.style.display = 'block';
-	closeIcon.style.display = 'none';
+		menu.style.height = '0';
+		menu.style.overflow = 'hidden';
+		menu.style.transform = 'scaleY(0)';
+		menuIcon.style.display = 'block';
+		closeIcon.style.display = 'none';
 }
 
-	/*******************************************************************TO SORT */
-    /**
-     * Filters fixtures table based on given team name input 
-     */
-     function searchFixtures(){
-		var input, filter, table, tr, td, text_value;
-		input = document.getElementById("fixtures-search-bar");
-		filter = input.value.toUpperCase();
-		table = document.getElementById("fixtures-table");
-		tr = table.getElementsByTagName("tr");
+/**
+ * Filters all fixtures based on given input value
+ * @var input - #fixtures-search-bar
+ * @var table - #fixtures-table
+ * @var table_row - table rows within #fixtures-table
+ * @var table_column - table columns within #fixtures-table
+ */
+function searchFixtures(){
+	var input = document.getElementById('fixtures-search-bar'),
+		table = document.getElementById("fixtures-table"),
+		filter = input.value.toUpperCase(),
+		table_row = table.getElementsByTagName('tr'),
+		text_value;
 
-		for (var index_position = 0; index_position < tr.length; index_position++){
-			td = tr[index_position].getElementsByTagName("td")[0];
-			
-			if (td){
-				text_value = td.textContent || td.innerText;
+	for(var value_position = 0; value_position < table_row.length; value_position++){
+		var table_column = table_row[value_position].getElementsByTagName("td")[0];
 
-				if (text_value.toUpperCase().indexOf(filter) > -1){
-					tr[index_position].style.display = "";
-				} 
-				else{
-					tr[index_position].style.display = "none";
-				}
+		if(table_column){
+			text_value = table_column.textContent || table_column.innerText;
+
+			if(text_value.toUpperCase().indexOf(filter) > -1){
+				table_row[value_position].style.display = '';
+			}
+			else{
+				table_row[value_position].style.display = 'none';
 			}
 		}
 	}
-
-	/**
-	 * Posts an inputted message to the message board
-	 */
-	function postMessage(){
-		let inputted_message = document.getElementById("input-message-field");
-		let message_board = document.getElementById("message-board");
-
-		let posted_message = document.createElement("DIV");
-			posted_message.innerText = inputted_message.innerText;
-
-		message_board.appendChild("posted-message");
-
-		console.log(message_board.childNodes);
-	}
+}
