@@ -1,0 +1,305 @@
+@import url("menuStyle.css");
+@import url("cardStyle.css");
+@import url("tabStyle.css");
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 30px;
+    scroll-behavior: smooth;
+    color: #111111;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.5s;
+       -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+         -o-transition: all 0.5s;
+            transition: all 0.5s;
+}
+
+html, body{
+    position: relative;
+    min-height: 100%;
+}
+
+a, button, th, .title, .banner-title, .card-title, .card-stats{
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+.container, .container-controls, .card, .card-body, .card-stats, #banner{
+    -webkit-display: flex;
+       -moz-display: flex;
+        -ms-display: flex;
+         -o-display: flex;
+            display: flex;
+}
+
+    .card, .card-body, .card-stats, main .container, #banner{
+        flex-direction: column;
+    }
+
+        header .container, #banner, #squad-links-container, #history-tab-container, footer .container{
+            align-items: center;
+        }
+
+button, td, .container-controls, .controls, .card-body, .card-stats, header, #squad-links-container a, .tab-content-description, #chatboard{
+    padding: 5px 5px;
+}
+
+button, .controls, #squad-links-container a{
+    margin: 5px 5px;
+}
+
+input[type="text"]{
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #333333;
+}
+
+button, #squad-links-container a{
+    border: none;
+    border-radius: 5px;
+    color: #bdbdbd;
+    background-color: #111111;
+}
+
+table{
+    text-transform: capitalize;
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+
+    tr{
+        border-bottom: 0.1rem solid #bdbdbd;
+    }
+
+/*****Container Styling*****/
+.controls{
+    cursor: pointer;
+    border-radius: 50%;
+    border: 0.1rem solid rgb(242, 242, 242);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.container-content{
+    display: -ms-grid;
+        display: grid;
+    grid-gap: 10px 10px;
+    padding: 10px 0px;
+}
+
+/*****Header Styling*****/
+header{
+    position: fixed;
+    z-index: 5;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+}
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /*****Logo Styling*****/
+    #logo{
+        max-width: 50px;
+        max-height: 50px;
+        width: 100%;
+        height: 100%;
+    }
+
+/*****Main Content Container Styling*****/
+main .container{
+    justify-content: center;
+}
+
+    main .container:nth-child(even){
+        background-color: #333333;
+    }
+
+    main .container:nth-child(even) input[type="text"]{
+        color: initial;
+    }
+
+    main .container:nth-child(even) *{
+        color: #bdbdbd;
+    }
+
+    main .container .container{
+        padding: 10px 5px;
+    }
+
+    /*****Banner Styling*****/
+    #banner{
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        text-align: center;
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("Images/banner.jpeg");
+    }
+
+        #banner *{
+            color: #bdbdbd;
+        }
+
+/*****Footer Styling*****/
+footer{
+    padding: 10px 10px;
+}
+
+    /*****Social Media Styling*****/
+    #social-media{
+        flex-direction: row;
+    }
+
+/**********************************************************************Mobile Layout**********/
+@media only screen and (min-width: 320px){
+    
+    /*****Header Styling*****/
+    header{
+        top: 0%;
+        left: 0%;
+        right: 0%;
+    }
+
+    /*****Main Content Container Styling*****/
+    #squad-section, 
+    #history-section, 
+    #news-section, 
+    #fixtures-all{
+        overflow-x: auto;
+    }
+
+    #squad-links-container,
+    #history-tab-container{
+        overflow-y: auto;
+        padding: 5px 0px;
+    }
+
+    #squad-content-container .container-content, 
+    #history-tab-content .container-tab-content, 
+    #news-headline-section, 
+    #chatboard{
+        grid-template-columns: repeat(1, auto);
+    }
+
+        /*****Index Page Styling*****/
+        #index-content-container .container-controls{
+            justify-content: flex-end;
+        }
+    
+            #index-content-container .controls{
+                border: none;
+                border-radius: 10px;
+                box-shadow: none;
+                color: #bdbdbd;
+                background-color: #111111;
+            }
+        
+            /*****Squad & History Section Styling*****/
+            #squad-section, 
+            #history-section{
+                grid-template-columns: repeat(4, auto);
+            }
+
+            /*****News Section Styling*****/
+            #news-section{
+                grid-template-columns: repeat(6, auto);
+            }
+
+        /*****Squad Page Styling*****/
+        #squad-content-container .card-squad{
+            display: none;
+        }
+
+        #squad-content-container .card-squad:target{
+            display: block;
+        }
+
+        /*****News Page Styling*****/
+        #chatboard{
+            grid-template-columns: repeat(1, auto);
+            border: 1px solid #bdbdbd;
+            border-radius: 5px;
+            margin: 0px 5px;
+        }
+
+            #chatboard::before{
+                content: "Posted comments will show here";
+            }
+
+    /*****Footer Styling*****/
+    footer .container{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+
+/**********************************************************************Tablet & Other Medium Sized Screen Layout**********/
+@media only screen and (min-width: 768px){
+
+    /*****Header Styling*****/
+    header{
+        top: 3%;
+        left: 2%;
+        right: 2%;
+        border-radius: 0.5rem;
+    }
+
+    /*****Main Content Container Styling*****/
+    #history-tab-container{
+        justify-content: space-evenly;
+    }
+
+    #squad-links-container{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #squad-content-container .container-content,
+    #history-tab-content .container-tab-content{
+        grid-template-columns: repeat(2, auto);
+    }
+
+    #achievements .container-content,
+    #news-headline-section{
+        grid-template-columns: repeat(3, auto);
+    }
+
+    /*****Footer Styling*****/
+    footer .container{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}
+
+/**********************************************************************Laptop, Desktop & Large Screen Layout**********/
+@media only screen and (min-width: 1024px){
+    
+    html, body{
+        font-size: 102%;
+    }
+
+    input[type="text"]:hover{
+        background-color: white;
+    }
+
+    button:hover{
+        background-color: #333333;
+    }
+
+    .controls:hover, #menu a:hover{
+        color: #bdbdbd;
+        background-color: #333333;
+    }
+
+}
