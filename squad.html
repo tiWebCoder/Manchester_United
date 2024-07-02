@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Squad</title>
+		<link rel="stylesheet" href="unitedStyle.css">
+		<script src="unitedScript.js"></script>
+		<link rel="shortcut icon" href="Images/logo.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+
+		<!--Header-->
+		<header>
+			<div class="container">
+				<a href="index.html"><img src="Images/logo.png" alt="logo" id="logo"></a>
+				
+				<div class="container-controls" id="menu-controls">
+					<a class="controls fa fa-bars" id="menu-icon" onclick="openMenu()"></a>
+					<a class="controls fa fa-times" id="close-icon" onclick="closeMenu()"></a> 
+				</div>
+			</div>
+
+			<!--Menu-->
+			<nav id="menu">
+				<a href="index.html">home</a>
+				<a href="fixtures.html">fixtures</a>
+				<a href="squad.html">squad</a>
+				<a href="history.html">history</a>
+				<a href="news.html">news</a>
+			</nav>
+		</header>
+
+		<!--Main Page Content-->
+		<main>
+			<div class="container" id="squad-content-container">
+
+				<!--Banner Section-->
+				<section class="container" id="banner">
+					<h1 class="banner-title">squad</h1>
+				</section>
+
+				<div class="container-grid" id="squad-content">
+
+					<!--Goalkeepers-->
+					<div class="card card-squad" id="card-squad-de-gea">
+						<img src="Images/Squad/Goalkeepers/de-gea.png" alt="de-gea-card-squad" class="card-image">
+						<div class="card-body">
+							<h3 class="card-title">david de gea</h3>
+							<h4 class="card-title">goalkeeper</h4>
+							<ul class="card-stats">
+								<li>name: david de gea</li>
+								<li>position: goalkeeper</li>
+								<li>shirt number: 1</li>
+								<li>appearances: 15</li>
+								<li>saves: 53</li>
+								<li>penalties saved: 0</li>
+								<li>punches: 2</li>
+								<li>high claims: 10</li>
+								<li>catches: 7</li>
+								<li>sweeper clearances: 4</li>
+								<li>throw outs: 39</li>
+								<li>goal kicks: 126</li>
+								<li>clean sheets: 9</li>
+								<li>goals conceded: 9</li>
+								<li>passes: 403</li>
+								<li>passes per match: 26.87</li>
+								<li>accurate long balls: 126</li>
+							</ul>
+						</div>
+					</div>
+
+					<!--Defenders-->
+					<div class="card card-squad" id="card-squad-rojo">
+						<img src="Images/Squad/Defenders/rojo.png" alt="rojo-card-squad" class="card-image">
+						<div class="card-body">
+							<h3 class="card-title">marcos rojo</h3>
+							<h4 class="card-title">defender</h4>
+							<ul class="card-stats">
+								<li>name: marcos rojo</li>
+								<li>position: defender</li>
+								<li>shirt number: 5</li>
+								<li>clean sheets: 0</li>
+								<li>goals conceded: 3</li>
+								<li>tackles: 1</li>
+								<li>tackle success(%): 100</li>
+								<li>interceptions: 2</li>
+								<li>clearances: 23</li>
+								<li>headed clearances: 15</li>
+								<li>aerial battles won: 3</li>
+								<li>aerial battles lost: 1</li>
+								<li>errors leading to goal: 0</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="card card-squad" id="card-squad-smalling">
+						<img src="Images/Squad/Defenders/smalling.png" alt="smalling-card-squad" class="card-image">
+						<div class="card-body">
+							<h3 class="card-title">chris smalling</h3>
+							<h4 class="card-title">defender</h4>
+							<ul class="card-stats">
+								<li>name: chris smalling</li>
+								<li>position: defender</li>
+								<li>shirt number: 12</li>
+								<li>clean sheets: 4</li>
+								<li>goals conceded: 7</li>
+								<li>tackles: 9</li>
+								<li>tackle success(%): 56</li>
+								<li>interceptions: 15</li>
+								<li>clearances: 53</li>
+								<li>headed clearances: 30</li>
+								<li>aerial battles won: 30</li>
+								<li>aerial battles lost: 8</li>
+								<li>errors leading to goal: 0</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="card card-squad" id="card-squad-valencia">
+						<img src="Images/Squad/Defenders/valencia.png" alt="valencia-card-squad" class="card-image">
+						<div class="card-body">
+							<h3 class="card-title">antonio valencia</h3>
+							<h4 class="card-title">defender</h4>
+							<ul class="card-stats">
+								<li>name: antonio valencia</li>
+								<li>position: defender</li>
+								<li>shirt number: 25</li>
+								<li>clean sheets: 9</li>
+								<li>goals conceded: 9</li>
+								<li>tackles: 26</li>
+								<li>tackle success(%): 54</li>
+								<li>interceptions: 15</li>
+								<li>clearances: 37</li>
+								<li>headed clearances: 17</li>
+								<li>aerial battles won: 12</li>
+								<li>aerial battles lost: 19</li>
+								<li>errors leading to goal: 0</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="card card-squad" id="card-squad-lindelof">
+						<img src="Images/Squad/Defenders/lindelof.png" alt="lindelof-card-squad" class="card-image">
+						<div class="card-body">
+							<h3 class="card-title">victor lindelof</h3>
+							<h4 class="card-title">defender</h4>
+							<ul class="card-stats">
+								<li>name: victor lindelof</li>
+								<li>position: defender</li>
+								<li>shirt number: 2</li>
+								<li>clean sheets: 1</li>
+								<li>goals conceded: 6</li>
+								<li>tackles: 5</li>
+								<li>tackle success(%): 80</li>
+								<li>interceptions: 4</li>
+								<li>clearances: 23</li>
+								<li>headed clearances: 14</li>
+								<li>aerial battles won: 7</li>
+								<li>aerial battles lost: 13</li>
+								<li>errors leading to goal: 1</li>
+							</ul>
+						</div>
+					</div>
+
+					<!--Midefielders-->
+					<div class="card card-squad" id="card-squad-pogba">
+						<img src="Images/Squad/Midfielders/pogba.png" alt="pogba-card-squad" class="card-image">
+						<div class="card-body">
+							<h3 class="card-title">paul pogba</h3>
+							<h4 class="card-title">midfielder</h4>
+							<ul class="card-stats">
+								<li>name: paul pogba</li>
+								<li>position: midfielder</li>
+								<li>shirt number: 6</li>
+								<li>goals: 3</li>
+								<li>goals per match: 0.38</li>
+								<li>goals with header: 0</li>
+								<li>goals with right foot: 3</li>
+								<li>goals with left foot: 0</li>
+								<li>penalties scored: 0</li>
+								<li>goals from freekick: 0</li>
+								<li>shots: 24</li>
+								<li>shots on target: 7</li>
+								<li>shooting accuracy(%): 29</li>
+								<li>assists: 5</li>
+								<li>passes: 552</li>
+								<li>passes per match: 69.0</li>
+								<li>crosses: 13</li>
+								<li>through balls: 8</li>
+								<li>accurate long balls: 33</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="card card-squad" id="card-squad-lingard">
+						<img src="Images/Squad/Midfielders/lingard.png" alt="lingard-card-squad" class="card-image">
+						<div class="card-body">
+							<h3 class="card-title">jesse lingard</h3>
+							<h4 class="card-title">midfielder</h4>
+							<ul class="card-stats">
+								<li>name: jesse lingard</li>
+								<li>position: midfielder</li>
+								<li>shirt number: 14</li>
+								<li>goals: 3</li>
+								<li>goals per match: 0.27</li>
+								<li>goals with header: 0</li>
+								<li>goals with right foot: 3</li>
+								<li>goals with left foot: 0</li>
+								<li>penalties scored: 0</li>
+								<li>goals from freekick: 0</li>
+								<li>shots: 12</li>
+								<li>shots on target: 6</li>
+								<li>shooting accuracy(%): 50</li>
+								<li>assists: 3</li>
+								<li>passes: 174</li>
+								<li>passes per match: 15.82</li>
+								<li>crosses: 14</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="card card-squad" id="card-squad-young">
+						<img src="Images/Squad/Midfielders/young.png" alt="young-card-squad" class="card-image">
+						<div class="card-body">
+							<h3 class="card-title">ashley young</h3>
+							<h4 class="card-title">midfielder</h4>
+							<ul class="card-stats">
+								<li>name: ashley young</li>
+								<li>position: midfielder</li>
+								<li>shirt number: 18</li>
+								<li>goals: 2</li>
+								<li>goals per match: 0.18</li>
+								<li>goals with header: 0</li>
+								<li>goals with right foot: 2</li>
+								<li>goals with left foot: 0</li>
+								<li>penalties scored: 0</li>
+								<li>goals from freekick: 1</li>
+								<li>shots: 12</li>
+								<li>shots on target: 3</li>
+								<li>shooting accuracy(%): 25</li>
+								<li>assists: 2</li>
+								<li>passes: 472</li>
+								<li>passes per match: 42.91</li>
+								<li>crosses: 45</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="card card-squad" id="card-squad-matic">
+						<img src="Images/Squad/Midfielders/matic.png" alt="matic-card-squad" class="card-image">
+						<div class="card-body">
+							<h3 class="card-title">nemanja matic</h3>
+							<h4 class="card-title">midfielder</h4>
+							<ul class="card-stats">
+								<li>name: nemanja matic</li>
+								<li>position: midfielder</li>
+								<li>shirt number: 31</li>
+								<li>goals: 0</li>
+								<li>goals per match: 0.00</li>
+								<li>goals with header: 0</li>
+								<li>goals with right foot: 2</li>
+								<li>goals with left foot: 0</li>
+								<li>penalties scored: 0</li>
+								<li>goals from freekick: 0</li>
+								<li>shots: 8</li>
+								<li>shots on target: 0</li>
+								<li>shooting accuracy(%): 0</li>
+								<li>assists: 1</li>
+								<li>passes: 1008</li>
+								<li>passes per match: 67.20</li>
+								<li>crosses: 12</li>
+							</ul>
+						</div>
+					</div>
+
+					<!--Forwards-->
+					<div class="card card-squad" id="card-squad-lukaku">
+						<img src="Images/Squad/Forwards/lukaku.png" alt="lukaku-card-squad" class="card-image">
+						<div class="card-body">
+							<h3 class="card-title">romelu lukaku</h3>
+							<h4 class="card-title">forward</h4>
+							<ul class="card-stats">
+								<li>name: romelu lukaku</li>
+								<li>position: forward</li>
+								<li>shirt number: 9</li>
+								<li>goals: 8</li>
+								<li>goals per match: 0.53</li>
+								<li>goals with header: 1</li>
+								<li>goals with right foot: 2</li>
+								<li>goals with left foot: 5</li>
+								<li>penalties scored: 0</li>
+								<li>goals from freekick: 0</li>
+								<li>shots: 51</li>
+								<li>shots on target: 24</li>
+								<li>shooting accuracy(%): 47</li>
+								<li>assists: 4</li>
+								<li>passes: 326</li>
+								<li>passes per match: 21.73</li>
+								<li>crosses: 15</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="card card-squad" id="card-squad-martial">
+						<img src="Images/Squad/Forwards/martial.png" alt="martial-card-squad" class="card-image">
+						<div class="card-body">
+							<h3 class="card-title">anthony martial</h3>
+							<h4 class="card-title">forward</h4>
+							<ul class="card-stats">
+								<li>name: anthony martial</li>
+								<li>position: forward</li>
+								<li>shirt number: 11</li>
+								<li>goals: 6</li>
+								<li>goals per match: 0.43</li>
+								<li>goals with header: 1</li>
+								<li>goals with right foot: 4</li>
+								<li>goals with left foot: 1</li>
+								<li>penalties scored: 1</li>
+								<li>goals from freekick: 0</li>
+								<li>shots: 17</li>
+								<li>shots on target: 8</li>
+								<li>shooting accuracy(%): 47</li>
+								<li>assists: 3</li>
+								<li>passes: 248</li>
+								<li>passes per match: 17.71</li>
+								<li>crosses: 19</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				
+			</div>
+		</main>
+
+		<!--Footer-->
+		<footer>
+			<div class="container">
+				<span id="disclaimer-link" onclick="viewDisclaimer()">Disclaimer</span>
+				<span>Manchester United &copy; 2023</span>
+
+				<div class="container-controls" id="social-media">
+					<a class="controls fa fa-facebook-square" href="https://www.facebook.com/manchesterunited/" target="blank"></a>
+					<a class="controls fa fa-instagram" href="https://www.instagram.com/manchesterunited/?hl=en" target="blank"></a>
+					<a class="controls fa fa-twitter" href="https://twitter.com/ManUtd?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="blank"></a>
+					<a class="controls fa fa-youtube-play" href="https://www.youtube.com/channel/UC6yW44UGJJBvYTlfC7CRg2Q" target="blank"></a>
+				</div>
+			</div>
+		</footer>
+
+	</body>
+</html>

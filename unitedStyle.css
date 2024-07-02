@@ -1,0 +1,263 @@
+@import url("Styles/Theme-Styles/backgroundStyle.css");
+@import url("Styles/Component-Styles/cardStyle.css");
+@import url("Styles/Component-Styles/containerStyle.css");
+@import url("Styles/Component-Styles/menuStyle.css");
+@import url("Styles/Component-Styles/tabStyle.css");
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Calibri, Arial, Tahoma;
+    line-height: 30px;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: #111111;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.5s;
+       -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+         -o-transition: all 0.5s;
+            transition: all 0.5s;
+}
+
+html, body{
+    position: relative;
+    min-height: 100%;
+}
+
+a, .controls, .title, .banner-title, .card-title, .card-stats, .tab-links, th{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+table{
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 5px;
+    border-collapse: collapse;
+}
+
+    tr{
+        border-bottom: 0.1rem solid #bdbdbd;
+    }
+
+input[type="text"]{
+    width: 80%;
+    text-transform: initial;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    padding: 5px 5px;
+    color: #111111;
+    background-color: #ffffff;
+}
+
+/*****Header Styling*****/
+header{
+    position: fixed;
+    z-index: 5;
+    background-color: #ffffff;
+}
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /*****Logo Styling*****/
+    #logo{
+        max-width: 50px;
+        max-height: 50px;
+        width: 100%;
+        height: 100%;
+    }
+
+/*****Main Content Container Styling*****/
+main .container{
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 0px;
+}
+
+    main .container .container{
+        padding: 10px 0px;
+    }
+
+    /*****Banner Styling*****/
+    #banner{
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("Images/banner.jpeg");
+    }
+
+        #banner *{
+            color: #bdbdbd;
+        }
+
+        .banner-title{
+            font-size: 4rem;
+            font-style: italic;
+            border-radius: 50px;
+            padding: 15px 15px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+        }
+
+/*****Footer Styling*****/
+footer{
+    padding: 10px 10px;
+}
+
+    #social-media{
+        flex-direction: row;
+        align-items: center;
+    }
+ 
+/**********************************************************************Mobile Layout**********/
+@media only screen and (min-width: 320px){
+
+    /*****Header Styling*****/
+    header{
+        top: 0%;
+        left: 0%;
+        right: 0%;
+    }
+
+    /*****Main Content Container Styling*****/
+    #squad-section-content, 
+    #news-section-content,
+    #history-section-content, 
+    #fixtures-all,
+    #history-links-container{
+        overflow-x: auto;
+    }
+
+    .container-tab-content,
+    #squad-content,
+    #news-headline-section, 
+    #comments-board{
+        grid-template-columns: repeat(1, auto);
+    }
+
+    #squad-section-content, 
+    #news-section-content{
+        grid-template-columns: repeat(4, auto);
+    }
+
+    #history-section-content{
+        grid-template-columns: repeat(5, auto);
+    }
+
+        /*****Index Page Styling*****/
+        #index-content-container .container-controls{
+            justify-content: flex-end;
+        }
+
+            #index-content-container .controls{
+                border-radius: 10px;
+                border: none;
+            }
+
+        /*****History Page Styling*****/
+        #history-links-container{
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        /*****Squad Page Styling*****/
+        #squad-content .card-stats{
+            height: 0;
+        }
+
+            #squad-content .card-squad:hover .card-stats{
+                height: max-content;
+            }
+
+        /*****News Page Styling*****/
+        #news-headline-section .card-news{
+            margin: 10px 5px;
+        }
+
+        #comments-board{
+            border: 1px solid #bdbdbd;
+            border-radius: 5px;
+            margin: 5px 5px;
+            color: initial;
+            background-color: #ffffff;
+        }
+
+            #comments-board::before{
+                content: "Posted comments will show here";
+            }
+
+    /*****Footer Styling*****/
+    footer .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+/**********************************************************************Tablet & Other Medium Sized Screen Layout**********/
+@media only screen and (min-width: 768px){
+
+    /*****Header Styling*****/
+    header{
+        top: 3%;
+        left: 2%;
+        right: 2%;
+        border-radius: 0.5rem;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
+    }
+
+    /*****Main Content Container Styling*****/
+
+        /*****History Page Styling*****/
+        #history-content .container-tab-content{
+            grid-template-columns: repeat(2, auto);
+        }
+
+        /*****Squad Page Styling*****/
+        #squad-content{
+            grid-template-columns: repeat(3, auto);
+        }
+
+            #squad-content .card-stats{
+                height: initial;
+            }
+
+        /*****News Page Styling*****/
+        #news-headline-section{
+            grid-template-columns: repeat(3, auto);
+        }
+
+    /*****Footer Styling*****/
+    footer .container{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}
+
+/**********************************************************************Laptop, Desktop & Large Screen Layout**********/
+@media only screen and (min-width: 1024px){
+
+    html, body{
+        font-size: 102%;
+    }
+
+    button:hover{
+        background-color: #333333;
+    }
+
+    .controls:hover, #menu a:hover{
+        color: #252527;
+        background-color: #ffffff;
+    }
+
+}

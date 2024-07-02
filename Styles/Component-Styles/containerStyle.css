@@ -1,0 +1,26 @@
+.container, .container-controls{
+    -webkit-display: flex;
+       -moz-display: flex;
+        -ms-display: flex;
+         -o-display: flex;
+            display: flex;
+    padding: 5px 5px;
+}
+
+.controls{
+    cursor: pointer;
+    border-radius: 50%;
+    border: 0.1rem solid rgb(242, 242, 242);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
+    padding: 5px 5px;
+    margin: 0px 5px;
+    color: #bdbdbd;
+    background-color: #252527;
+}
+
+.container-grid, .container-tab-content{
+    display: -ms-grid;
+        display: grid;
+    grid-gap: 10px 10px;
+    padding: 10px 5px;
+}
